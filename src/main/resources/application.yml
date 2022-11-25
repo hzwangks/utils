@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+      ds1:
+        driver-class-name: com.aliyun.polardb.Driver
+        jdbc-url: jdbc:polardb://ip:port/name?currentSchema=public&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username:
+        password:
+      ds2:
+        driver-class-name: com.aliyun.polardb.Driver
+        jdbc-url: jdbc:polardb://ip:port/name?currentSchema=schemaName&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username:
+        password:
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+
+
+mybatis:
+  mapper-locations: classpath:mapping/*/*.xml
+  type-aliases-package: com.utils.entity
+
+
+
